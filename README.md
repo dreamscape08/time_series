@@ -1,6 +1,6 @@
 # Time Series Yen Currency Report
 
-![Yen Photo](Images/unit-10-readme-photo.png)
+![Yen Photo](./Resources/Images/unit-10-readme-photo.png)
 
 ## Overview
 
@@ -52,9 +52,9 @@ Steps Taken
 
 The results of the time series analysis and modeling were used to answer the following questions:
 
-1. Based on my time series analysis, would I buy the yen now?
-2. Is the risk of the yen expected to increase or decrease?
-3. Based on the model evaluation, do I feel confident in using these models for trading?
+* Based on my time series analysis, would I buy the yen now?
+* Is the risk of the yen expected to increase or decrease?
+* Based on the model evaluation, do I feel confident in using these models for trading?
 
 #### Linear Regression Forecasting
 
@@ -73,6 +73,7 @@ The results of the linear regression analysis and modeling were used to answer t
 * Does this model perform better or worse on out-of-sample data compared to in-sample data?
 * Out-of-sample data is data that the model hasn't seen before (Testing data).
 * In-sample data is data that the model was trained on (Training data).
+
 - - -
 
 ### Conclusions and Considerations
@@ -80,47 +81,88 @@ The results of the linear regression analysis and modeling were used to answer t
 #### Time-Series Summary
 
 1. Decomposition using a Hodrick-Prescott Filter (Decompose the Settle price into trend and noise).
+
 Settle price and Trend plot
-![HP Trend & Close](Images/HP_filter_decomposition.png)
+
+![HP Trend & Close](./Resources/Images/HP_filter_decomposition.png)
+
 Plot of Noise
-![HP Noise](Images/HP_Filter_Noise.png)
+
+![HP Noise](./Resources/Images/HP_Filter_Noise.png)
 
 2. Forecasting Returns using an ARMA Model.
+
 Summary of Results Table
-![ARMA Model Results](Images/ARMA_MODEL_RESULTS.png)
+
+![ARMA Model Results](./Resources/Images/ARMA_MODEL_RESULTS.png)
+
 5 Day Forecasted Plot
-![ARMA Model 5-Day Forecast Plot](Images/5dayARMAplot.png)
+
+![ARMA Model 5-Day Forecast Plot](./Resources/Images/5dayARMAplot.png)
 
 3. Forecasting the Settle Price using an ARIMA Model.
+
 Summary of Results Table
-![ARIMA Model Results](Images/ARIMA_MODEL_RESULTS.png)
+
+![ARIMA Model Results](./Resources/Images/ARIMA_MODEL_RESULTS.png)
+
 5 Day Forecasted Plot
-![ARIMA Model 5-Day Forecast Plot](Images/5dayARIMAplot.png)
+
+![ARIMA Model 5-Day Forecast Plot](./Resources/Images/5dayARIMAplot.png)
 
 4. Forecasting Volatility with GARCH.
+
 Summary of Results Table
-![GARCH Model Results](Images/GARCH_MODEL_RESULTS.png)
+
+![GARCH Model Results](./Resources/Images/GARCH_MODEL_RESULTS.png)
 5 Day Forecasted Plot
-![GARCH Model 5-Day Forecast Plot](Images/5dayGARCHplot.png)
+
+![GARCH Model 5-Day Forecast Plot](./Resources/Images/5dayGARCHplot.png)
+
+SUMARY OF TIME_SERIES ANALYSIS
+
+* Based on my time series analysis, would I buy the yen now?
+Summary of time series analysis shows that it would be highly risky to buy the yen right now.
+* Is the risk of the yen expected to increase or decrease?
+Based on the model, the value of the yen has higher probability of decreasing which in turn lowers the vaue of exchange in the US  markets, on top of expected volatility shown from the GARCH analysis, I would say the risk is supposed to increase.
+* Based on the model evaluation, do I feel confident in using these models for trading?
+I would not be confident in using these models for trading given that I have no idea as to what all these numbers and values represent. I would stick to the skills that are already creating value for me and keep working on these new skills for a better understanding.
 
 #### Linear Regression Summary
 
 1. Data Preparation (Creating Returns and Lagged Returns and splitting the data into training and testing data)
 Summary Table
-![X & Y train/test data](Images/XYtrainTEST.png)
+
+![X & Y train/test data](./Resources/Images/XYtrainTEST.png)
 
 2. Fitting a Linear Regression Model.
 
 3. Making predictions using the testing data.
-![5day Forecasted Results](Images/5dayLR_Forecast.png)
+
+![5day Forecasted Results](./Resources/Images/5dayLR_Forecast.png)
+
 20day Forecasted Plots
-![20day Forecasted Results](Images/LRsubplots.png)
-![20day Forecasted Results Combined](Images/LRcombined.png)
+
+![20day Forecasted Results](./Resources/Images/LRsubplots.png)
+
+![20day Forecasted Results Combined](./Resources/Images/LRcombined.png)
 
 4. Out-of-sample performance.
-![out-of-sample Results](Images/RMSEoutofsample.png)
+
+![out-of-sample Results](./Resources/Images/RMSEoutofsample.png)
 
 5. In-sample performance.
-![in-sample Results](Images/RMSE_insample.png)
+
+![in-sample Results](./Resources/Images/RMSE_insample.png)
+
+SUMMARY OF LINEAR REGRESSION MODEL
+
+* Does this model perform better or worse on out-of-sample data compared to in-sample data?
+
+The model has a root mean square error of 0.414% on out-of-sample data and 0.706% on in-sample data. Hence, the model performs better with (Testing data) that it has not worked with before.
+
+##Out-of-sample data is data that the model hasn't seen before (Testing data).
+
+##In-sample data is data that the model was trained on (Training data).
 
 - - -
